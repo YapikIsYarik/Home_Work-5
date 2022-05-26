@@ -9,7 +9,7 @@ function GetPairs (students ,themes){
     //міняю послідовність імен в масиві так шоб була послідовність хлопець,дівчина..
     students.splice(1 , 2 ,"Олена", "Ігор");
     let pairs = [];
-    for (let i = 0 ;i < i < students.length / 2 ; i++){
+    for (let i = 0 ;i < students.length / 2 ; i++){
         let pair = [];
         pair.push(students[i *2] + " i " +students[i*2+1]);
         pair.push(themes[i]);
