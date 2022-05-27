@@ -6,12 +6,14 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 
 function GetPairs(students, themes) {
+   let sortStud = students.slice(0);
+   //let sortStud = students.concat(); //робить те саме що і slice(0) але працює повільніше
    //міняю послідовність імен в масиві так шоб була послідовність хлопець,дівчина..
-   students.splice(1, 2, "Олена", "Ігор");
+   sortStud.splice(1, 2, "Олена", "Ігор");
    let pairs = [];
-   for (let i = 0; i < students.length / 2; i++) {
-      pairs.push([students[i * 2] + " i " +
-         students[i * 2 + 1], themes[i], getRandom()]);
+   for (let i = 0; i < sortStud.length / 2; i++) {
+      pairs.push([sortStud[i * 2] + " i " +
+         sortStud[i * 2 + 1], themes[i], getRandom()]);
    }
    return pairs;
 }
@@ -19,14 +21,11 @@ function getRandom() {
    return Math.round(Math.random() * (5 - 1) + 1);
 }
 function GetMarks(marks) {
-   let StudentMark = [];
+   let studentMark = [];
    for (let i = 0; i < students.length; i++) {
-      StudentMark.push([students[i], marks[i]]);
+      studentMark.push([students[i], marks[i]]);
    }
-   return StudentMark;
+   return studentMark;
 }
 console.log(GetPairs(students, themes));
 console.log(GetMarks(marks));
-
-
-
