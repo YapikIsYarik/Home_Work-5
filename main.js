@@ -26,7 +26,7 @@ function GetPairsTheme(pairs, themes) {
 function GetPairsThemeMarks(pairs) {
    let pairsMark = [];
    for (let i = 0; i < students.length / 2; i++) {
-      pairsMark.push([pairs[i][0] + "i" + pairs[i][1], themes[i], getRandom()]);
+      pairsMark.push([pairs[i][0] + " i " + pairs[i][1], themes[i], getRandom()]);
    }
    return pairsMark;
 }
